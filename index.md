@@ -6,6 +6,7 @@ categories: demo
 ---
 
 This is my first paragraph...
+Welcome to my blog. This is my year 4 project for C++. We have to create and test a digital rain like the matrix.
 
 ## This is a Heading
 
