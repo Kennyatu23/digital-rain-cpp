@@ -154,7 +154,6 @@ Efficiency: Skipping the already-included file can save compilation time.
 
 
 '#ifndef DIGITALRAIN_H 
-
 #define DIGITALRAIN_H
 
 #include <iostream>		// Library ostream
