@@ -126,7 +126,10 @@ void DigitalRain::SetGreenText() {
 
 /* Function to clear Screen*/
 
-void DigitalRain::ClearScreen() 
+void DigitalRain::ClearScreen()
+
 { 
-	std::system("CLS"); 
+
+	std::system("CLS");
+ 
 }'
