@@ -104,7 +104,9 @@ has two arguments
 
 void DigitalRain::GotoXY(int x, int y)       // Class funciton Name with two arguments(varibles type int)
 
+
 {
+
 	COORD coord;
 	coord.X = x;
  
