@@ -70,7 +70,7 @@ int main()
 
 			rain.GotoXY(x1, row);
 			std::cout << "#";      // THis line prints out character ####### in the terminal
-			std::this_thread::sleep_for(std::chrono::milliseconds(100));       //This short delay gives the look of falling character by pausing the program for set time (milliseconds)
+			std::this_thread::sleep_for(std::chrono::milliseconds(100));       //This short delay gives the look of falling character by pausing the program for set time(milliseconds)
 
 			// Clears screen and reset y positions when reaching bottom
 			if (row >= maxRow) {
@@ -370,7 +370,7 @@ private:
 
 
 #endif'
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/ScreenshotRandom15032025.png" width="400" height="300">
 
