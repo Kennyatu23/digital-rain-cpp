@@ -32,7 +32,7 @@ You can add an impage that has been uploaded to the repository in a /docs/assets
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigitalRain.png" width="400" height="300">
 
-main.cpp code for above image:
+main.cpp code for above image::
 
 '#include <iostream>			// cerr, endl
 
@@ -82,3 +82,50 @@ int main()
 
 	return 0;                  // returns nothing
 }'
+
+DigitalRain.cpp file for above image::
+
+
+
+"#include <iostream>		// cout, endl, fixed
+
+#include <string>		// string
+
+#include "DigitalRain.h"	// Programmer
+
+#include "TestDigitalRain.h"	// Test functions
+
+#include <windows.h>		// SetConsoleCursorPosition
+
+Function Named GotoXY is a function to palce the cursor at a particular point on the terminal using x and y axis
+has two arguments
+  
+Function is declared here in class named DigitalRain This is where the work is done by function 
+
+
+void DigitalRain::GotoXY(int x, int y)       // Class funciton Name with two arguments(varibles type int)
+{
+	COORD coord;
+	coord.X = x;
+ 
+	coord.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
+void DigitalRain::SetGreenText() {
+
+	// Get the console handle
+ 
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+ 
+	// Set the text color to green (10 is green text with black background)
+ 
+	SetConsoleTextAttribute(hConsole, 10);
+}
+
+/* Function to clear Screen*/
+
+void DigitalRain::ClearScreen() 
+{ 
+	std::system("CLS"); 
+}"
