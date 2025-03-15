@@ -34,7 +34,7 @@ You can add an impage that has been uploaded to the repository in a /docs/assets
 
 main.cpp code for above image::
 
-"#include <iostream>			// cerr, endl
+`#include <iostream>			// cerr, endl
 
 #include <stdexcept>			// out_of_range
 
@@ -81,7 +81,7 @@ int main()
 	}
 
 	return 0;                  // returns nothing
-}"
+}`
 
 DigitalRain.cpp file for above image::
 
