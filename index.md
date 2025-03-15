@@ -35,9 +35,13 @@ You can add an impage that has been uploaded to the repository in a /docs/assets
 main.cpp code for above image:
 
 '#include <iostream>			// cerr, endl
+
 #include <stdexcept>			// out_of_range
+
 #include "DigitalRain.h"		// DigitalRain  need double quotes when class we create ourselves
+
 #include <chrono>			// Time related library
+
 #include <thread>			// Sleep
 
 
