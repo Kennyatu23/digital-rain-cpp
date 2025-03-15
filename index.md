@@ -377,6 +377,8 @@ private:
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/ScreenshotRandom2.png" width="400" height="300">
 
+
+
 Added Random columns code to main.cpp file only
 
 '#include <iostream>			// cerr(Charactor error), endl(endline)
