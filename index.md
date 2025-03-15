@@ -169,37 +169,27 @@ Efficiency: Skipping the already-included file can save compilation time.
 
 
 /* Class is created "DigitalRain" and made public so it can be shared with other files (.h .cpp)*/
-class DigitalRain 
+class DigitalRain
+
 {
 
 public:
 
-    //DigitalRain(int width, int height); //Constructor to initialise screen dimensions
-
-    //int GetScreenWidth() const;       // Getter for Screen width
-    //int GetScreenHeight() const;      // Getter for Screen height
     int screenWidth = 70;
     int screenHeight = 50;
 
     /* Public methods for other functionality */
-	void GotoXY(int x, int y);     // Function prototype declaration informers compiler of the type of function arguments and return types if any
+    void GotoXY(int x, int y);     // Function prototype declaration informers compiler of the type of function arguments and return types if any
     void ClearScreen();            // Function prototype declaration for clear 
     void SetGreenText();           // Function to set green text color
-    //void GenerateRain();
+   
 
     
 
 private:
-    /* Private member VAribles */
-    //int screenWidth;         //varible for screen width
-    //int screenHeight;        // varible for screen height
 
     std::vector<int> rainPositions;      // Stores current positions of each rain column
-    //void clearScreen();                // Clears the console screen
-
-
+   
 };
-
-
 
 #endif
