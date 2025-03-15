@@ -133,3 +133,73 @@ void DigitalRain::ClearScreen()
 	std::system("CLS");
  
 }'
+
+DigiutalRain.h for above  2 column 2 Character image::
+
+
+/*************************Part of an include Guard Used in C++ to prevent multiple inclusions of the same header.**********************
+#ifndef DIGITALRAIN_H:
+This checks if the macro DIGITALRAIN_H has not been defined yet.
+If it hasn’t, the code inside the guard will be processed.
+If it has already been defined, the code is skipped, preventing redefinition errors.
+#define DIGITALRAIN_H:
+If the code inside the #ifndef is processed, this line defines the macro DIGITALRAIN_H so 
+that any subsequent inclusion of this file will skip it.
+
+Avoids Multiple Inclusions: Prevents multiple inclusions of the same header file, which can cause redefinition errors.
+for example, if multiple files include DigitalRain.h, the compiler might try to process the same function declarations 
+multiple times, leading to errors.
+Efficiency: Skipping the already-included file can save compilation time.
+*/
+
+
+'#ifndef DIGITALRAIN_H 
+
+#define DIGITALRAIN_H
+
+#include <iostream>		// Library ostream
+
+#include <string>		// Library string
+
+#include <vector>		// Library vector
+
+#include <chrono>       // Library chrono (time related operations)
+
+#include <windows.h>    // Library provides functions, macros, and data types 
+
+
+/* Class is created "DigitalRain" and made public so it can be shared with other files (.h .cpp)*/
+class DigitalRain 
+{
+
+public:
+
+    //DigitalRain(int width, int height); //Constructor to initialise screen dimensions
+
+    //int GetScreenWidth() const;       // Getter for Screen width
+    //int GetScreenHeight() const;      // Getter for Screen height
+    int screenWidth = 70;
+    int screenHeight = 50;
+
+    /* Public methods for other functionality */
+	void GotoXY(int x, int y);     // Function prototype declaration informers compiler of the type of function arguments and return types if any
+    void ClearScreen();            // Function prototype declaration for clear 
+    void SetGreenText();           // Function to set green text color
+    //void GenerateRain();
+
+    
+
+private:
+    /* Private member VAribles */
+    //int screenWidth;         //varible for screen width
+    //int screenHeight;        // varible for screen height
+
+    std::vector<int> rainPositions;      // Stores current positions of each rain column
+    //void clearScreen();                // Clears the console screen
+
+
+};
+
+
+
+#endif
