@@ -374,9 +374,75 @@ private:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/ScreenshotRandom15032025.png" width="400" height="300">
-<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigitalRain.png" width="400" height="300">
 
-Added Random columns code::
+<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/ScreenshotRandom2.png" width="400" height="300">
+
+Added Random columns code to main.cpp file only
+
+'#include <iostream>			// cerr(Charactor error), endl(endline)
+
+#include <stdexcept>			// out_of_range
+
+#include "DigitalRain.h"		// DigitalRain  need double quotes when class we create ourselves
+
+#include <chrono>			// Time related library functions
+
+#include <thread>			// Sleep function
+
+#include <cstdlib>              // for rand() and srand() :: Random number generator
+
+#include <ctime>                // time seed for randomness
+
+//#include "TestDigitalRain"	// Test Function
+
+int TestSystemColours()
+{
+	std::system("COLOR 1F");    // Color blue background bright white text
+
+	return 0;
+}
+
+int main()
+{
+	std::srand(std::time(0));          // Seed random number generator
+	
+
+	DigitalRain rain(70, 50);  // Class(Digitalrain) Object(rain) with width=70, height=50 
+
+		int maxRow = rain.GetScreenHeight();  // Getting the screen height
+		int maxCol = rain.GetScreenWidth();   // Getting the screen width
+
+
+		while (1) {  
+			                /*Random column Positions*/
+                    int x = std::rand() % maxCol;  //Random column for the first character
+		    int x1 = std::rand() % maxCol;  //Random column for the second  character
+
+                    int y = 1;	   // Starting row for both character (top of screen would be 0) (Y)
+
+
+		for (int row = y; row <= maxRow; row++)
+		{
+			rain.GotoXY(x, row);   // Move to the character position
+			rain.SetGreenText();   // Set green text color
+			std::cout << "!";      // Print out character ! in the terminal
+
+			rain.GotoXY(x1, row);
+			std::cout << "#";      // Prints out character # in the terminal
+			std::this_thread::sleep_for(std::chrono::milliseconds(100));      //This short delay gives the look of falling character by pausing the program for set time (milliseconds)
+
+
+			if (row == maxRow) {
+				rain.ClearScreen();
+				//y = 1;
+
+			}
+
+		}
+	}
+
+	return 0;                  // returns nothing
+}
 
 
 
