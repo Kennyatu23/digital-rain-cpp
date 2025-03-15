@@ -34,19 +34,12 @@ You can add an impage that has been uploaded to the repository in a /docs/assets
 
 main.cpp code for above image:
 
-'#include <iostream>				// cerr, endl
+'#include <iostream>			// cerr, endl
 #include <stdexcept>			// out_of_range
 #include "DigitalRain.h"		// DigitalRain  need double quotes when class we create ourselves
-#include <chrono>				// Time related library
-#include <thread>				// Sleep
-//#include "TestDigitalRain"	// Test Function
+#include <chrono>			// Time related library
+#include <thread>			// Sleep
 
-int TestSystemColours()
-{
-	std::system("COLOR 1F");    // Color blue background bright white text
-
-	return 0;
-}
 
 int main()
 {
@@ -58,8 +51,8 @@ int main()
 		int y = 1;	   // starting row of character (top of screen would be 0) (Y)
 		//int maxRow = rain.screenHeight;
 
-		int x1 = 6;    // starting column of character (X)
-		int y1 = 1;	   // starting row of character (top of screen would be 0) (Y)
+		int x1 = 6;     // starting column of character (X)
+		int y1 = 1;	// starting row of character (top of screen would be 0) (Y)
 		
 		int maxRow = rain.screenHeight;
 		
@@ -71,12 +64,12 @@ int main()
 
 			rain.GotoXY(x1, row);
 			std::cout << "#";      // THis line prints out character ####### in the terminal
-			std::this_thread::sleep_for(std::chrono::milliseconds(100));      //This short delay gives the look of falling character by pausing the program for set time (milliseconds)
+			std::this_thread::sleep_for(std::chrono::milliseconds(100));       //This short delay gives the look of falling character by pausing the program for set time (milliseconds)
 
 			// Clears screen and reset y positions when reaching bottom
 			if (row >= maxRow) {
 				rain.ClearScreen();
-				row = 1;               // Resets row position at end of each run
+				row = 1;        // Resets row position at end of each run
 
 			}
 
