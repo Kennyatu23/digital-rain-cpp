@@ -134,8 +134,7 @@ void DigitalRain::ClearScreen()
  
 }'
 
-DigiutalRain.h for above  2 column 2 Character image::
-
+DigitalRain.h for above  2 column 2 Character image::
 
 /*************************Part of an include Guard Used in C++ to prevent multiple inclusions of the same header.**********************
 #ifndef DIGITALRAIN_H:
@@ -193,3 +192,183 @@ private:
 };
 
 #endif
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the code I have added a constructor for better code practice for initialising screen height and screen width This is the updated code::
+
+main.cpp file
+
+
+'#include <iostream>			// cerr, endl
+
+#include <stdexcept>			// out_of_range
+
+#include "DigitalRain.h"		// DigitalRain  need double quotes when class we create ourselves
+
+#include <chrono>			// Time related library
+
+#include <thread>			// Sleep
+
+//#include "TestDigitalRain"	// Test Function
+
+int TestSystemColours()
+
+{
+
+	std::system("COLOR 1F");    // Color blue background bright white text
+
+	return 0;
+ 
+}
+
+int main()
+
+{
+
+	
+
+		DigitalRain rain(70, 50);     // Class(Digitalrain) Object(rain) with width=70, height=50 
+		
+
+		int x = 3;	   // starting column of character (X)
+		int y = 1;	   // starting row of character (top of screen would be 0) (Y)
+		int x1 = 6;        // starting column of character (X)
+		int y1 = 1;	   // starting row of character (top of screen would be 0) (Y)
+
+		int maxRow = rain.GetScreenHeight();
+		int maxCol = rain.GetScreenWidth();
+
+		while (1) {	
+
+		for (int row = y; row <= maxRow; row++)
+		{
+			rain.GotoXY(x, row);
+			rain.SetGreenText();   // Set green text color
+			std::cout << "!";      // THis line prints out character !!!!!!! in the terminal
+
+			rain.GotoXY(x1, row);
+			std::cout << "#";                                                 // THis line prints out character !!!!!!! in the terminal
+			std::this_thread::sleep_for(std::chrono::milliseconds(100));      //This short delay gives the look of falling character by pausing the program for set time (milliseconds)
+
+
+			if (row >= maxRow) {
+				rain.ClearScreen();
+				y = 1;
+
+			}
+
+		}
+	}
+
+	return 0;                  // returns nothing
+}'
+
+DigitalRain.cpp file
+
+'#include <iostream>				// cout, endl, fixed
+
+#include <string>				// string
+
+#include "DigitalRain.h"		        // Programmer
+
+#include "TestDigitalRain.h"	                // Test functions
+
+#include <windows.h>			        // SetConsoleCursorPosition
+
+/*Function Named GotoXY is a function to palce the cursor at a particular point on the terminal using x and y axis
+  has two arguments
+  Function is declared here in class named DigitalRain This is where the work is done by function */
+
+
+DigitalRain::DigitalRain(int width, int height) {
+
+	screenWidth = width; // initialises the screenwidth with value passed from 'width'
+	screenHeight = height; // initialises the screenheight with value passed from 'height'
+}
+// Getter for screen width
+int DigitalRain::GetScreenWidth() const {
+	return screenWidth;
+}
+
+// Getter for screen height
+int DigitalRain::GetScreenHeight() const {
+	return screenHeight;
+}
+
+void DigitalRain::GotoXY(int x, int y)               // Class funciton Name with two arguments/varibles type int
+{
+	COORD coord;
+	coord.X = x;
+	coord.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
+void DigitalRain::SetGreenText() {
+	// Get the console handle
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	// Set the text color to green (10 is green text with black background)
+	SetConsoleTextAttribute(hConsole, 10);
+}
+
+/* Function to clear Screen*/
+void DigitalRain::ClearScreen() 
+{ 
+	std::system("CLS"); 
+}'
+
+DigitalRain.h file
+
+'#ifndef DIGITALRAIN_H
+
+#define DIGITALRAIN_H
+
+#include <iostream>		// Library ostream
+
+#include <string>		// Library string
+
+#include <vector>		// Library vector
+
+#include <chrono>               // Library chrono (time related operations)
+
+#include <windows.h>            // Library provides functions, macros, and data types 
+
+
+/* Class is created "DigitalRain" and made public so it can be shared with other files (.h .cpp)*/
+class DigitalRain {
+public:
+
+    DigitalRain(int width, int height); //Constructor to initialise screen dimensions
+
+    int GetScreenWidth() const;       // Getter for Screen width
+    int GetScreenHeight() const;      // Getter for Screen height
+    
+
+    /* Public methods for other functionality */
+    void GotoXY(int x, int y);     // Function prototype declaration informers compiler of the type of function arguments and return types if any
+    void ClearScreen();            // Function prototype declaration for clear 
+    void SetGreenText();           // Function to set green text color
+    
+
+    
+
+private:
+    /* Private member Varibles */
+    int screenWidth;         //varible for screen width
+    int screenHeight;        // varible for screen height
+
+    std::vector<int> rainPositions;      // Stores current positions of each rain column
+    
+
+
+};
+
+
+
+#endif
+
+
