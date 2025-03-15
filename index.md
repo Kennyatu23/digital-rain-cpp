@@ -34,7 +34,7 @@ You can add an impage that has been uploaded to the repository in a /docs/assets
 
 main.cpp code for above image::
 
-'#include <iostream>			// cerr, endl
+"#include <iostream>			// cerr, endl
 
 #include <stdexcept>			// out_of_range
 
@@ -81,7 +81,7 @@ int main()
 	}
 
 	return 0;                  // returns nothing
-}'
+}"
 
 DigitalRain.cpp file for above image::
 
@@ -99,11 +99,11 @@ DigitalRain.cpp file for above image::
 
 Function Named GotoXY is a function to palce the cursor at a particular point on the terminal using x and y axis
 has two arguments
-  
-Function is declared here in class named DigitalRain This is where the work is done by function 
+  Function is declared here in class named DigitalRain This is where the work is done by function 
 
 
 void DigitalRain::GotoXY(int x, int y)       // Class funciton Name with two arguments(varibles type int)
+
 {
 	COORD coord;
 	coord.X = x;
