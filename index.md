@@ -32,7 +32,7 @@ You can add an impage that has been uploaded to the repository in a /docs/assets
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigitalRain.png" width="400" height="300">
 
-main.cpp code for above image::
+<main.cpp code for above image::
 
 '#include <iostream>			// cerr, endl
 
@@ -81,9 +81,9 @@ int main()
 	}
 
 	return 0;                  // returns nothing
-}'
+}'>
 
-DigitalRain.cpp file for above image::
+<DigitalRain.cpp file for above image::
 
 
 '#include <iostream>		// cout, endl, fixed
@@ -132,9 +132,9 @@ void DigitalRain::ClearScreen()
 
 	std::system("CLS");
  
-}'
+}'>
 
-DigitalRain.h for above  2 column 2 Character image::
+<DigitalRain.h for above  2 column 2 Character image::
 
 /*************************Part of an include Guard Used in C++ to prevent multiple inclusions of the same header.**********************
 #ifndef DIGITALRAIN_H:
@@ -191,17 +191,12 @@ private:
    
 };
 
-#endif
+#endif>
 
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the code I have added a constructor for better code practice for initialising screen height and screen width This is the updated code::
 
-main.cpp file
+<main.cpp file
 
 
 '#include <iostream>			// cerr, endl
@@ -266,9 +261,9 @@ int main()
 	}
 
 	return 0;                  // returns nothing
-}'
+}'>
 
-DigitalRain.cpp file
+<DigitalRain.cpp file
 
 '#include <iostream>				// cout, endl, fixed
 
@@ -319,9 +314,9 @@ void DigitalRain::SetGreenText() {
 void DigitalRain::ClearScreen() 
 { 
 	std::system("CLS"); 
-}'
+}'>
 
-DigitalRain.h file
+<DigitalRain.h file
 
 '#ifndef DIGITALRAIN_H
 
@@ -369,7 +364,7 @@ private:
 
 
 
-#endif'
+#endif'>
 
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/ScreenshotRandom15032025.png" width="400" height="300">
