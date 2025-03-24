@@ -449,7 +449,9 @@ int main()
 
 
 
-<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/MemberFunction.png" width="400" height="300">
+
+
+<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/MemberFunction.png" width="600" height="300">
 
 
 
