@@ -454,5 +454,6 @@ int main()
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/MemberFunction.png" width="600" height="300">
 
 
-
+I added this snip of code to show a change I've made. I've removed rain.(instance) from rain.GotoXY. I had to create an instance or object of the class Digital rain when I had this logic to generate the rain effect in 
+main.cpp as the logic was outside the class DigitalRain and i needed the object rain to access the functions in DigitalRain class. Now I have the logic moved to the DigitalRain class the GenerateRain has now become a member fuction it can directly call all the other functions in the DigitalRain class (e.g GotoXY(), SetGreenText()).  
 
