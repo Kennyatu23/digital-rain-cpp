@@ -9,7 +9,17 @@ Welcome to my blog. This is my year 4 project for C++. We have to create and tes
 
 ## DigitalRain C++
 
-This is a paragraph. Add an empty line to start a new paragraph.
+## Design & Test
+in my design i use a class called digital rain.
+
+
+## Algorithm
+
+## Problem-solving
+
+## Problem-solving
+
+
 
 
 Font can be *Italic* or **Bold**.
