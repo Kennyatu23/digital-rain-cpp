@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Modern C++ YR4 Project
+title: C++ 
+YR4 Project
 tags: cpp coding project
 categories: demo
 ----
