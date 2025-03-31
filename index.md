@@ -7,8 +7,6 @@ Cpp Coding
 catergories: tags
 ----
 
-
-
 ## INTRODUCTION 
 Welcome to my github blog. This is my year 4 project for C++. The project brief was to design code to simulate a "Matrix" style rain effect,
 where characters would fall down the console screen. 
