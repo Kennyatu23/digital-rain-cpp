@@ -4,7 +4,7 @@
 ---
 C++  Project Yr4
 Cpp Coding 
-categories: demo
+catergories: tags
 ----
 
 ## INTRODUCTION 
