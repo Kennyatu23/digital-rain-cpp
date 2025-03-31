@@ -1,15 +1,17 @@
 ---
-title: C++ YR4 Project
-
-tags: cpp coding project
-
+C++ YR4 Project
+Cpp coding project
 categories: demo
 ----
+
 ## INTRODUCTION 
 Welcome to my github blog. This is my year 4 project for C++. The project brief was to design code to simulate a "Matrix" style rain effect,
 where characters would fall down the console screen. 
 
+
 ## DigitalRain C++
+
+
 
 ## Design & Test
 This project would be designed using object orientated code what is object orientated code explain.
