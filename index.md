@@ -4,15 +4,42 @@ title: C++ YR4 Project
 tags: cpp coding project
 categories: demo
 ----
-
-Welcome to my blog. This is my year 4 project for C++. We have to create and test a digital rain like the matrix.
+## INTRODUCTION 
+Welcome to my github blog. This is my year 4 project for C++. The project brief was to design code to simulate a "Matrix" style rain effect,
+where characters would fall down the console screen. 
 
 ## DigitalRain C++
 
 ## Design & Test
-in my design i use a class called digital rain.
+This project would be designed using object orientated code what is object orientated code explain.
+In my design I used a class called digital rain. Created an object called rain. need to explain a class and an object,
+constructor, getter, setter, explain. functions (methods)
 
+code divided up between files. ie main.cpp, digirain.cpp, digirain.h also explain. 
 
+'
+#include <iostream>	// Library ostream
+#include <string>	// Library string
+#include <vector>       // Library vector container
+#include <chrono>       // Library chrono (time related functions)
+#include <windows.h>    // Library provides functions, macros, and data types 
+#include <thread>       // Library for sleep function' 
+explain the above 
+
+A bullet list:
+
+- vectors
+- used a vector picture and explain
+
+- 
+- algorithms
+  
+- some code example and explain
+
+- 
+- iterators
+
+- 
 ## Algorithm
 
 ## Problem-solving
@@ -28,13 +55,7 @@ Code can be highlighted with 'backticks'.
 
 Hyperlinks look like this: [GitHub Help](https://help.github.com/).
 
-A bullet list:
 
-- vectors
-- algorithms
-- iterators
-
-- 
 
 You can add an impage that has been uploaded to the repository in a /docs/assets/images folder.
 
