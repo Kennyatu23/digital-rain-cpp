@@ -1,5 +1,4 @@
 ---
-layout: post
 title: C++ YR4 Project
 tags: cpp coding project
 categories: demo
