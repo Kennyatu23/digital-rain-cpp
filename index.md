@@ -1,10 +1,9 @@
 
-# MATRIX
+# Digital Rain "MATRIX"
 
 ---
-C++  Project Yr4
-Cpp Coding 
-catergories: tags
+## C++  Project Yr4
+
 ----
 
 ## INTRODUCTION 
