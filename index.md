@@ -137,7 +137,7 @@ In the code I have added a constructor for better code practice for initialising
 have included a short delay which gives the look of the falling character by pausing the program for set time (milliseconds).
 I have also included a new header libraries for time related code. 
 
-<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigitalRain.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/Screenshot_C250405.png" width="400" height="300">
 
 main.cpp file
 
