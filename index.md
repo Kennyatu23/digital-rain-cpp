@@ -43,9 +43,7 @@ to try and run some tests but I ran out of time to get to that stage. Also the c
  
 
 
-constructor, getter, setter, explain. functions (methods)
 
-code divided up between files. ie main.cpp, digirain.cpp, digirain.h also explain. 
 
 '
 #include <iostream>	// Library ostream
