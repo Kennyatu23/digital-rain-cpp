@@ -43,17 +43,6 @@ to try and run some tests but I ran out of time to get to that stage. Also the c
  
 
 
-
-
-'
-#include <iostream>	// Library ostream
-#include <string>	// Library string
-#include <vector>       // Library vector container
-#include <chrono>       // Library chrono (time related functions)
-#include <windows.h>    // Library provides functions, macros, and data types 
-#include <thread>       // Library for sleep function' 
-explain the above 
-
 A bullet list:
 
 - vectors
