@@ -122,8 +122,6 @@ Function is declared here in class named DigitalRain This is where the work is d
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/Screenshot_D250405.png" width="400" height="300">
 
 
-
-
 void DigitalRain::GotoXY(int x, int y)       // Class funciton Name with two arguments(varibles type int)
 
 {
