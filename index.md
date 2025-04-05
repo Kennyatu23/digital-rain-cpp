@@ -39,24 +39,7 @@ to try and run some tests but I ran out of time to get to that stage. Also the c
 - .h files: Header file which contains declarations of methods (functions), classes, varibles and constants but not actual code (implementation). Works as an interface for
             the code, lets other files know what methods and classes are availible. Has the declarations, has no actual code of what methods do and is shared between files. 
    
-   
- 
-
-
-A bullet list:
-
-- algorithms
   
-- some code example and explain
-
-- 
-- iterators
-
-- 
-## Algorithm
-Hyperlinks look like this: [GitHub Help](https://help.github.com/).
-You can add an impage that has been uploaded to the repository in a /docs/assets/images folder.
-
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigitalRain.png" width="400" height="300">
 
@@ -104,6 +87,8 @@ main.cpp code for above image::
 }'
 
 
+
+
 Below is the source file for the above image. You can see the header files (libraries) included. For example the input/output stream library
 #include <iostream>. 
 DigitalRain.cpp file for above image::
@@ -116,10 +101,15 @@ DigitalRain.cpp file for above image::
 
 #include <windows.h>		// SetConsoleCursorPosition
 
+
+
+
 Function Named GotoXY is a function to place the cursor at a particular point on the terminal using the x(columns) and y(rows) axis
 has two arguments.Function is declared here in class named DigitalRain. This is where the work is done by function.
 
 ![image](https://github.com/user-attachments/assets/42006980-25b9-4fcb-b488-17e28b7305fb)
+
+
 
 
 In the code I have added a constructor for better code practice for initialising screen height and screen width. Also I 
@@ -135,9 +125,13 @@ main.cpp file
 
 #include <chrono>			// Time related library
 
+
+
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/ScreenshotRandom15032025.png" width="400" height="300">
 
+
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/ScreenshotRandom2.png" width="400" height="300">
+
 
 
 
@@ -158,6 +152,11 @@ int main()
 			                /*Random column Positions*/
                     int x = std::rand() % maxCol;  //Random column for the first character
 		    int x1 = std::rand() % maxCol;  //Random column for the second  character
+
+
+All the above snips are from the beginning of the project. It was just to try show the project at the very beginning. I didnt document the beginning very well
+but I plan to go into more detail wit the final finished code for the project digital rain and give a clearer understanding of what the code is doing.
+      
 
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/SetHeightTerminalDigiRain.png" width="400" height="300">
