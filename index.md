@@ -139,6 +139,8 @@ I have also included a new header libraries for time related code.
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/Screenshot_C250405.png" width="400" height="300">
 
+<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/Screenshot_E250405.png" width="400" height="300">
+
 main.cpp file
 
 #include <chrono>			// Time related library
