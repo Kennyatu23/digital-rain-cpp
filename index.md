@@ -120,6 +120,9 @@ Function Named GotoXY is a function to place the cursor at a particular point on
 has two arguments
 Function is declared here in class named DigitalRain This is where the work is done by function 
 
+<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigitalRain.png" width="400" height="300">
+
+
 
 void DigitalRain::GotoXY(int x, int y)       // Class funciton Name with two arguments(varibles type int)
 
