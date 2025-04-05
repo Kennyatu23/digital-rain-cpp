@@ -19,9 +19,28 @@ For this class I created an object (instance) called rain which I used to pass t
 class. The constructor initialises the object rain. I set the width (columns), height (rows) to constants. The console is broken down into rows and columns.
 I also set the number of charactors I wanted falling to constants. I used a vector called rainPositions to store the current position of the rain columns.
 I created methods for setting the text to green, to clear the screen, generate the rain, for setting the cursor position to x (columns) or y (rows). I was 
-to try and run some tests but I ran out of time to get to that stage. Also the code is distributed between different files sucgh as .h (header files)  and .cpp (source files)
-This idea better for orgainising code. Makes it easier to read and maintain.
+to try and run some tests but I ran out of time to get to that stage. Also the code is distributed between different files sucgh as .h (header files)  and .cpp
+(source files). Using header and source files is better for orgainising code. Makes code easier to read, maintain and makes code more efficient when compiling.
 
+- Classes: User_defined data types that work as blueprints for creating objects. A class defines the attributes (data members) and methods (functions) that describe 
+           the behavior and data of the objects created from it.
+- Objects: Instances of a class, created with specific data. They can represent things from the real world or just ideas or concepts. When a class is defined,
+           it only describes how an object should be, but no object exists.
+- Methods: Are functions which define the actions or behaviors of an object (what object it can do). They are written inside a class and describe the specific
+           tasks the object can perform.
+- Attributes: Represent the state of an object. In other words, they are the characteristics that make each object unique. Objects store data in ther attributes.
+              Class attributes are shared by all objects of that class and are defined in the class template.
+
+- Constructor: Special type of method in a class that is automatically called when you create an object. It's used to set up the object, like giving it starting values.
+- Vector: A collection of things of the same type int, floats, char or user defined (custom data types). Implemented as a class template and not a built in type.
+  
+- .cpp files: Source file which contains the implementation of the methods that were declared in the corresponding header file (.h). Where the actual code for the program  
+              logic is witten.Basically contains the method definitions, where you wrtie how things work and are linked to header files.
+- .h files: Header file which contains declarations of methods (functions), classes, varibles and constants but not actual code (implementation). Works as an interface for
+            the code, lets other files know what methods and classes are availible. Has the declarations, has no actual code of what methods do and is shared between files. 
+   
+   
+ 
 
 
 constructor, getter, setter, explain. functions (methods)
