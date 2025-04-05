@@ -45,10 +45,6 @@ to try and run some tests but I ran out of time to get to that stage. Also the c
 
 A bullet list:
 
-- vectors
-- used a vector picture and explain
-
-- 
 - algorithms
   
 - some code example and explain
@@ -72,30 +68,12 @@ You can add an impage that has been uploaded to the repository in a /docs/assets
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigitalRain.png" width="400" height="300">
 
-<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/SetHeightTerminalDigiRain.png" width="400" height="300">
-
-
-<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigiRainFalling2.png" width="400" height="300">
-
-
-<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigiRainFalling3.png" width="400" height="300">
-
-
+This image is the out put othe first piece of code I implemented. The code shows the class DigitalRain and the object rain created.
+you can see I have set the cursor to start at column (x) position three and the row (y) to one. This starts the cursor three positions
+in from the side of the console and one position down from top of the console.
 
 main.cpp code for above image::
-
-'#include <iostream>			// cerr, endl
-
-#include <stdexcept>			// out_of_range
-
-#include "DigitalRain.h"		// DigitalRain  need double quotes when class we create ourselves
-
-#include <chrono>			// Time related library
-
-#include <thread>			// Sleep
-
-
-int main()
+'int main()
 {
 
 	DigitalRain rain;  // Class(Digitalrain) Object(rain)
@@ -493,7 +471,13 @@ int main()
 	return 0;                  // returns nothing
 }'
 
+<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/SetHeightTerminalDigiRain.png" width="400" height="300">
 
+
+<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigiRainFalling2.png" width="400" height="300">
+
+
+<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigiRainFalling3.png" width="400" height="300">
 
 
 
