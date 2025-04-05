@@ -60,23 +60,23 @@ You can add an impage that has been uploaded to the repository in a /docs/assets
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigitalRain.png" width="400" height="300">
 
-This image is the out put othe first piece of code I implemented. The code shows the class DigitalRain and the object rain created.
-you can see I have set the cursor to start at column (x) position three and the row (y) to one. This starts the cursor three positions
+This image is the output of the first piece of code I implemented. The code shows the class DigitalRain and the object rain which I created.
+You can see I have set the cursor to start at column (x) position three and the row (y) to one. This starts the cursor three positions
 in from the side of the console and one position down from top of the console.
 
 main.cpp code for above image::
 'int main()
 {
 
-	DigitalRain rain;  // Class(Digitalrain) Object(rain)
+	DigitalRain rain;          // Class(Digitalrain) Object(rain)
 
 	while (1) {
 		int x = 3;	   // starting column of character (X)
 		int y = 1;	   // starting row of character (top of screen would be 0) (Y)
 		//int maxRow = rain.screenHeight;
 
-		int x1 = 6;     // starting column of character (X)
-		int y1 = 1;	// starting row of character (top of screen would be 0) (Y)
+		int x1 = 6;       // starting column of character (X)
+		int y1 = 1;	  // starting row of character (top of screen would be 0) (Y)
 		
 		int maxRow = rain.screenHeight;
 		
@@ -104,27 +104,24 @@ main.cpp code for above image::
 }'
 
 
-
+Below is the source file for the above image. You can see the header files (libraries) included. For example the input/output stream library
+#include <iostream>. 
 DigitalRain.cpp file for above image::
-
 
 '#include <iostream>		// cout, endl, fixed
 
 #include <string>		// string
 
-#include "DigitalRain.h"	// Programmer
-
-#include "TestDigitalRain.h"	// Test functions
+#include "DigitalRain.h"	// Digital rain
 
 #include <windows.h>		// SetConsoleCursorPosition
 
-Function Named GotoXY is a function to palce the cursor at a particular point on the terminal using x and y axis
+Function Named GotoXY is a function to place the cursor at a particular point on the terminal using the x(columns) and y(rows) axis
 has two arguments
-  Function is declared here in class named DigitalRain This is where the work is done by function 
+Function is declared here in class named DigitalRain This is where the work is done by function 
 
 
 void DigitalRain::GotoXY(int x, int y)       // Class funciton Name with two arguments(varibles type int)
-
 
 {
 
@@ -217,32 +214,14 @@ private:
 
 
 
-In the code I have added a constructor for better code practice for initialising screen height and screen width This is the updated code::
+In the code I have added a constructor for better code practice for initialising screen height and screen width. Also I 
+have included ashort delay which gives the look of the falling character by pausing the program for set time (milliseconds).
+I have also included a new header libraries for time related code. 
 
 main.cpp file
 
-
-'#include <iostream>			// cerr, endl
-
-#include <stdexcept>			// out_of_range
-
-#include "DigitalRain.h"		// DigitalRain  need double quotes when class we create ourselves
-
 #include <chrono>			// Time related library
 
-#include <thread>			// Sleep
-
-//#include "TestDigitalRain"	// Test Function
-
-int TestSystemColours()
-
-{
-
-	std::system("COLOR 1F");    // Color blue background bright white text
-
-	return 0;
- 
-}
 
 int main()
 
