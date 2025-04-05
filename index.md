@@ -139,110 +139,19 @@ I have also included a new header libraries for time related code.
 
 ![image](https://github.com/user-attachments/assets/b0659ce0-54c4-431f-9a43-79062de201e8)
 
+![image](https://github.com/user-attachments/assets/47bae286-76d9-429d-be2d-7f0c54adac88)
 
-<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/Screenshot_C250405.png" width="400" height="300">
-
-<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/Screenshot_E250405.png" width="400" height="300">
 
 main.cpp file
 
 #include <chrono>			// Time related library
 
 
-int main()
 
-{
+Function Named GotoXY is a function to palce the cursor at a particular point on the terminal using x and y axis
+has two arguments.Function is declared here in class named DigitalRain. This is where the work is done by function.
 
-	
-
-		DigitalRain rain(70, 50);     // Class(Digitalrain) Object(rain) with width=70, height=50 
-		
-
-		int x = 3;	   // starting column of character (X)
-		int y = 1;	   // starting row of character (top of screen would be 0) (Y)
-		int x1 = 6;        // starting column of character (X)
-		int y1 = 1;	   // starting row of character (top of screen would be 0) (Y)
-
-		int maxRow = rain.GetScreenHeight();
-		int maxCol = rain.GetScreenWidth();
-
-		while (1) {	
-
-		for (int row = y; row <= maxRow; row++)
-		{
-			rain.GotoXY(x, row);
-			rain.SetGreenText();   // Set green text color
-			std::cout << "!";      // THis line prints out character !!!!!!! in the terminal
-
-			rain.GotoXY(x1, row);
-			std::cout << "#";                                                 // THis line prints out character !!!!!!! in the terminal
-			std::this_thread::sleep_for(std::chrono::milliseconds(100));      //This short delay gives the look of falling character by pausing the program for set time (milliseconds)
-
-
-			if (row >= maxRow) {
-				rain.ClearScreen();
-				y = 1;
-
-			}
-
-		}
-	}
-
-	return 0;                  // returns nothing
-}'
-
-<DigitalRain.cpp file
-
-'#include <iostream>				// cout, endl, fixed
-
-#include <string>				// string
-
-#include "DigitalRain.h"		        // Programmer
-
-#include "TestDigitalRain.h"	                // Test functions
-
-#include <windows.h>			        // SetConsoleCursorPosition
-
-/*Function Named GotoXY is a function to palce the cursor at a particular point on the terminal using x and y axis
-  has two arguments
-  Function is declared here in class named DigitalRain This is where the work is done by function */
-
-
-DigitalRain::DigitalRain(int width, int height) {
-
-	screenWidth = width; // initialises the screenwidth with value passed from 'width'
-	screenHeight = height; // initialises the screenheight with value passed from 'height'
-}
-// Getter for screen width
-int DigitalRain::GetScreenWidth() const {
-	return screenWidth;
-}
-
-// Getter for screen height
-int DigitalRain::GetScreenHeight() const {
-	return screenHeight;
-}
-
-void DigitalRain::GotoXY(int x, int y)               // Class funciton Name with two arguments/varibles type int
-{
-	COORD coord;
-	coord.X = x;
-	coord.Y = y;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-}
-
-void DigitalRain::SetGreenText() {
-	// Get the console handle
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	// Set the text color to green (10 is green text with black background)
-	SetConsoleTextAttribute(hConsole, 10);
-}
-
-/* Function to clear Screen*/
-void DigitalRain::ClearScreen() 
-{ 
-	std::system("CLS"); 
-}'
+![image](https://github.com/user-attachments/assets/42006980-25b9-4fcb-b488-17e28b7305fb)
 
 DigitalRain.h file
 
