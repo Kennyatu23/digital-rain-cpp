@@ -5,12 +5,25 @@
 ----
 
 ## INTRODUCTION 
-Welcome to my github blog. This is my year 4 project for C++. The project brief was to design code to simulate a "Matrix" style rain effect,
-where characters would fall down the console screen. 
+Welcome to my github blog for my year 4 digital rain project using Modern C++. The project brief was to design and execute code to simulate the "Matrix" style effect,
+where characters fall down the console screen like Digital rain. Within this blog I hope to demonstrate my on going progress with explaination of my code used. The blog
+will be broken down into sections to show the design and test, problem solving, insight into modern C++ and explain the algorithms used. 
 
 ## Design & Test
-This project would be designed using object orientated code what is object orientated code explain.
-In my design I used a class called digital rain. Created an object called rain. need to explain a class and an object,
+This project was designed using modern C++ (released 2011) which supports object orientated programming. Object orientated programming is 
+a style of programming based on the concept of objects. Objects are intances of classes which contain the attributes(data) and methods(fuctions)
+which manipulates the data stored in the object.
+
+In my design I started by creating a class called DigitalRain. I made the class public so it could be shared with the other files where nesscessary.
+For this class I created an object (instance) called rain which I used to pass two parameters (width,height). I created a constructor for my DigitalRain
+class. The constructor initialises the object rain. I set the width (columns), height (rows) to constants. The console is broken down into rows and columns.
+I also set the number of charactors I wanted falling to constants. I used a vector called rainPositions to store the current position of the rain columns.
+I created methods for setting the text to green, to clear the screen, generate the rain, for setting the cursor position to x (columns) or y (rows). I was 
+to try and run some tests but I ran out of time to get to that stage. Also the code is distributed between different files sucgh as .h (header files)  and .cpp (source files)
+This idea better for orgainising code. Makes it easier to read and maintain.
+
+
+
 constructor, getter, setter, explain. functions (methods)
 
 code divided up between files. ie main.cpp, digirain.cpp, digirain.h also explain. 
