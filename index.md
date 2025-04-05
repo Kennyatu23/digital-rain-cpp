@@ -54,17 +54,9 @@ A bullet list:
 
 - 
 ## Algorithm
-
-## Problem-solving
-
-## Problem-solving
-
-
 Hyperlinks look like this: [GitHub Help](https://help.github.com/).
-
-
-
 You can add an impage that has been uploaded to the repository in a /docs/assets/images folder.
+
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigitalRain.png" width="400" height="300">
 
