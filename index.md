@@ -119,6 +119,7 @@ DigitalRain.cpp file for above image::
 Function Named GotoXY is a function to place the cursor at a particular point on the terminal using the x(columns) and y(rows) axis
 has two arguments
 Function is declared here in class named DigitalRain This is where the work is done by function 
+
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/Screenshot_A250405 .png" width="400" height="300">
 
 
