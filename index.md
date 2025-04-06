@@ -11,7 +11,7 @@ will be broken down into sections to show the design and test, problem solving, 
 
 ## Design & Test
 This project was designed using modern C++ (released 2011) which supports object orientated programming. Object orientated programming is 
-a style of programming based on the concept of objects. Objects are intances of classes which contain the attributes(data) and methods(fuctions)
+a style of programming based on the concept of objects. Objects are intances of classes which contain the attributes(data) and methods(functions)
 which manipulates the data stored in the object.
 
 In my design I started by creating a class called DigitalRain. I made the class public so it could be shared with the other files where nesscessary.
@@ -155,9 +155,18 @@ int main()
 
 
 All the above snips are from the beginning of the project. It was just to try show the project at the very beginning. I didnt document the beginning very well
-but I plan to go into more detail wit the final finished code for the project digital rain and give a clearer understanding of what the code is doing.
-      
+but I plan to go into more detail with the final finished code for the project digital rain and give a clearer understanding of what the code is doing.
+-----------
 
+-----------
+
+In my main.cpp file (source file), I included standard library headers and my custom DigitalRain.h file. This links the code from DigitalRain.h to main.cpp, allowing access to the functions and classes defined in that header.
+Here in my main.cpp, I set the console width (columns), height (rows), and the number of falling characters. These values control the size of the display and how many characters fall at once, shaping how the digital rain effect looks on screen.
+
+I also declared two variables maxCol (width) maxRow and (height). These are used to store the maximum number of rows and columns which helps control the size of the screen. maxRow and maxCol (in main.cpp) are passed into the constructor in the DigitalRain class in DigitalRain.cpp and are used to set up the screen. I also pass maxRow and maxCol into the GenerateRain method in DigitalRain.cpp. This lets the method know the size of the screen so it can generate falling characters within the row and column limits I set.
+
+I created the rain object of the DigitalRain class because you need to create an object to access the class’s member functions and variables. In C++, you cannot directly use the DigitalRain class methods or variables unless you create an object (like rain) of that class. The rain object allows me to use the DigitalRain constructor to set up the screen size by passing in the width and height.
+After creating the rain object, I call the GenerateRain() method. Since GenerateRain() is part of the DigitalRain class, I need the rain object to access and run the method.
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/SetHeightTerminalDigiRain.png" width="400" height="300">
 
