@@ -168,6 +168,38 @@ I also declared two variables maxCol (width) maxRow and (height). These are used
 I created the rain object of the DigitalRain class because you need to create an object to access the class’s member functions and variables. In C++, you cannot directly use the DigitalRain class methods or variables unless you create an object (like rain) of that class. The rain object allows me to use the DigitalRain constructor to set up the screen size by passing in the width and height.
 After creating the rain object, I call the GenerateRain() method. Since GenerateRain() is part of the DigitalRain class, I need the rain object to access and run the method.
 
+
+
+
+<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/MemberFunction.png" width="600" height="300">
+
+
+I added this snip of code to show a change I've made. I've removed rain.(object) from "rain.GotoXY". I had to create an object (instance) of the DigitalRain class because I had the logic to generate the rain effect in 
+main.cpp outside the  DigitalRain class and i needed the object rain to access the methods (functions). Now that I have the logic moved to the DigitalRain class as part of the GenerateRain() member function, it can directly call all the other functions in the class (e.g GotoXY(), SetGreenText()) without needing to go through the object. 
+
+--------
+
+--------
+The code below is from the DigitalRain.cpp file. This is the source file where the actual code for the DigitalRain class methods (functions) is written. The class and its functions are declared in the DigitalRain.h header file, the real code (logic) for what the methods (functions) do is written here.
+
+
+
+
+This is the constructor method. The constructor runs automatically when the object of the DigitalRain class is created. The rain object in main.cpp is what triggers the constructor to run. The constructor takes in the screen's width and height as arguments and stores them in screenWidth and screenHeight to set the screen size for the digital rain effect.
+
+rainPositions is the name of the vector declared in the .h file. The line rainPositions.resize(width, 0); in the constructor resizes the vector to match the number of columns on the console (width). The initial value of each element in the vector is set to 0, which means each column starts at position 0 on the console.
+
+![image](https://github.com/user-attachments/assets/493531d5-6deb-4341-90a7-0a552bfe6a1e)
+
+
+
+
+![image](https://github.com/user-attachments/assets/ac9c5482-5d5c-4399-ba00-a3b6dcda70cd)
+
+
+
+
+
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/SetHeightTerminalDigiRain.png" width="400" height="300">
 
 
@@ -176,13 +208,4 @@ After creating the rain object, I call the GenerateRain() method. Since Generate
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigiRainFalling3.png" width="400" height="300">
 
-
-
-
-
-<img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/MemberFunction.png" width="600" height="300">
-
-
-I added this snip of code to show a change I've made. I've removed rain.(object) from "rain.GotoXY". I had to create an object (instance) of the DigitalRain class because I had the logic to generate the rain effect in 
-main.cpp outside the  DigitalRain class and i needed the object rain to access the methods (functions). Now that I have the logic moved to the DigitalRain class as part of the GenerateRain() member function, it can directly call all the other functions in the class (e.g GotoXY(), SetGreenText()) without needing to go through the object.  
 
