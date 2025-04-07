@@ -259,9 +259,13 @@ On reflection I was looking forward to learning about Modern C++ and taking on t
 ---------
 
 #References:
+
 Lectuer: M.Lynch 
-https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP   (reference digitalrain)
+
+https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP 
+
 https://en.wikipedia.org/wiki/Object-oriented_programming
+
 https://chatgpt.com
 
 
