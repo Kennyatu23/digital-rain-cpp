@@ -233,6 +233,23 @@ The std::this_thread::sleep_for(std::chrono::milliseconds(100)) creates a short 
 This is my digitalrain.h header file where the DigitalRain class is declared. It contains the method prototypes (declarations) and the vector for storing the column positions of the falling characters. In the header file the constructor is defined and the public methods and private member variables are declared. Also includes a vector to store the positions of the falling characters.
 ![image](https://github.com/user-attachments/assets/2518ca70-ac0b-4f82-af35-36274ddf6190)
 
+
+
+This is the start of the header Guard code block:
+
+![image](https://github.com/user-attachments/assets/6fc2ce28-baf3-4394-9445-3da694f55bc3)
+
+This is the line to end the header guard:
+
+![image](https://github.com/user-attachments/assets/9935dbe5-03a9-46e8-b1d2-4bf13cbd17b9)
+
+The method prototypes and vector are declared in between the start and end of header guard in the digitalrain.h file (header file).
+The header guard used to ensure contents of the file are only used once during compilation. If you don't use the header guard you could include the same header file a number of times. You can include the same header file directly or indirectly from other files. If this happens then the compiler will see the same declarations and definitions repeatedly. This will cause errors such as redefinition of classes or functions and others.
+Only used in header files not source files. Reason is the header files are meant to be included in multiple .cpp files (main.cpp, DigitalRain.cpp). Without the guard compiler would redefine the functions and classes leading to errors. The .cpp files are not shared with other files and are compiled individually, Their declarations won't be redeclared elsewhere so no need for a header guard
+
+
+
+
 ---------
 
 ---------
