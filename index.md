@@ -252,7 +252,7 @@ These are some images of the digital rain effect I was able to achieve.
 
 #Reflection:
 
-On reflection I was looking forward to learning about Modern C++ and taking on the challange of this project. I'm just disappointed that I couldnt divide up my time so I could achieve a better standard of project and code. Also would have documented my progress better If I was to do this again. I just find it difficult to work on code and projects and document everything. The notes were very helpful and now looking back I have a better understanding of what I did get done. The blog has helped me get that understanding.  Its a good project and a good way of learning modern C++
+On reflection I was looking forward to learning about Modern C++ and taking on the challange of this project. I'm just disappointed that I couldnt divide up my time so I could achieve a better standard of project and code. Also would have documented my progress better If I was to do this again. I just find it difficult to work on code and projects and document everything. The notes were very helpful and now looking back I have a better understanding of what I did get done. The blog has helped me get that understanding.  Its a good project and a good way of learning modern C++. The us eof Ai was also helpful. It was very helpful for breaking code down into simple parts so I could get a clearer picture. I found I could get it to understand my learning style and match its explaination to my learning style.
 
 ---------
 
