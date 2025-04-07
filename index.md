@@ -226,6 +226,16 @@ It then enters an infinite loop (while (1)) to continuously generate the rain ef
 The std::this_thread::sleep_for(std::chrono::milliseconds(100)) creates a short delay, making the characters appear to "fall" down the screen by pausing the program for 100 milliseconds between each update.
 ![image](https://github.com/user-attachments/assets/42ac5b3d-1eaa-49b7-a3b0-435549b8e0f5)
 
+-----------
+
+-----------
+
+This is my digitalrain.h header file where the DigitalRain class is declared. It contains the method prototypes (declarations) and the vector for storing the column positions of the falling characters. In the header file the constructor is defined and the public methods and private member variables are declared. Also includes a vector to store the positions of the falling characters.
+![image](https://github.com/user-attachments/assets/2518ca70-ac0b-4f82-af35-36274ddf6190)
+
+---------
+
+---------
 These are some images of the digital rain effect I was able to achieve.
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/SetHeightTerminalDigiRain.png" width="400" height="300">
@@ -235,5 +245,25 @@ These are some images of the digital rain effect I was able to achieve.
 
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/DigiRainFalling3.png" width="400" height="300">
+
+------------
+
+------------
+
+#Reflection:
+
+On reflection I was looking forward to learning about Modern C++ and taking on the challange of this project. I'm just disappointed that I couldnt divide up my time so I could achieve a better standard of project and code. Also would have documented my progress better If I was to do this again. I just find it difficult to work on code and projects and document everything. The notes were very helpful and now looking back I have a better understanding of what I did get done. The blog has helped me get that understanding.  Its a good project and a good way of learning modern C++
+
+---------
+
+---------
+
+#References:
+Lectuer: M.Lynch 
+https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP   (reference digitalrain)
+https://en.wikipedia.org/wiki/Object-oriented_programming
+https://chatgpt.com
+
+
 
 
