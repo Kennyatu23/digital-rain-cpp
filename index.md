@@ -183,22 +183,50 @@ main.cpp outside the  DigitalRain class and i needed the object rain to access t
 The code below is from the DigitalRain.cpp file. This is the source file where the actual code for the DigitalRain class methods (functions) is written. The class and its functions are declared in the DigitalRain.h header file, the real code (logic) for what the methods (functions) do is written here.
 
 
-
+![image](https://github.com/user-attachments/assets/493531d5-6deb-4341-90a7-0a552bfe6a1e)
 
 This is the constructor method. The constructor runs automatically when the object of the DigitalRain class is created. The rain object in main.cpp is what triggers the constructor to run. The constructor takes in the screen's width and height as arguments and stores them in screenWidth and screenHeight to set the screen size for the digital rain effect.
 
 rainPositions is the name of the vector declared in the .h file. The line rainPositions.resize(width, 0); in the constructor resizes the vector to match the number of columns on the console (width). The initial value of each element in the vector is set to 0, which means each column starts at position 0 on the console.
 
+
+This is the vector declared in the digitalrain.h (header) file. The reason to use a vector is that I need to track the position of each character in the rain effect across multiple columns. Since the number of columns depends on screenWidth, a vector makes it easy to store a varying number of values because a vector is a dynamic array that can change its size as needed.
 ![image](https://github.com/user-attachments/assets/493531d5-6deb-4341-90a7-0a552bfe6a1e)
 
+---------
 
+---------
 
+Here I used a Getter. This method (function) returns the value of screenWidth. The const keyword means the method won’t change any class variables. It allows access the current value of screenWidth without modifying it. The getter provides controlled access to a private variable, this ensures it can be read safely without being modified directly. It helps maintain encapsulation, consistency, and makes it easier to make future changes without affecting other parts of the program.
 
 ![image](https://github.com/user-attachments/assets/ac9c5482-5d5c-4399-ba00-a3b6dcda70cd)
 
+---------
 
+---------
 
+The GotoXY function is declared in the DigitalRain.h header file. This moves the console cursor to a specific position on the screen using two integer arguments, x (columns) and y (rows). It defines a COORD structure to store these positions, sets the X and Y values with the passed arguments, and then uses SetConsoleCursorPosition with GetStdHandle(STD_OUTPUT_HANDLE) to move the cursor to the new position in the console.
+The COORD structure is a data type in Windows used to store the coordinates X (for the column position) and Y (for the row position), used to specify the location of something, in this program used to for the console cursor.
+![image](https://github.com/user-attachments/assets/c4f24a1e-5fae-43a7-9b44-f85ab2609441)
 
+----------
+
+----------
+
+This method uses the std::system("CLS") command to clear the console. It runs the "CLS" command, which is a built-in command in the operating system that clears all the text currently displayed in the console window.
+![image](https://github.com/user-attachments/assets/08c49227-f620-41c6-be2b-c48bd1cb4971)
+
+------------
+
+------------
+
+This is the The GenerateRain method which creates the falling characters effect in the console. The method starts by randomly setting the column position of each character (rain column) using std::rand() % maxCol inside the first loop. The rainPositions[i] stores each column’s random position.
+
+It then enters an infinite loop (while (1)) to continuously generate the rain effect. For each row (from 1 to maxRow), it moves each character to a new position by updating rainPositions[i] and uses GotoXY to position the cursor at that spot. The text color is set to green using SetGreenText(), and it alternates between printing "1" and "0" characters (if (i % 2 == 0)).
+The std::this_thread::sleep_for(std::chrono::milliseconds(100)) creates a short delay, making the characters appear to "fall" down the screen by pausing the program for 100 milliseconds between each update.
+![image](https://github.com/user-attachments/assets/42ac5b3d-1eaa-49b7-a3b0-435549b8e0f5)
+
+These are some images of the digital rain effect I was able to achieve.
 
 <img src="https://raw.githubusercontent.com/Kennyatu23/digital-rain-cpp/main/docs/assets/images/SetHeightTerminalDigiRain.png" width="400" height="300">
 
